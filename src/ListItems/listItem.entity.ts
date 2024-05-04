@@ -23,6 +23,6 @@ export class listItem {
 
   @Column({ type: 'date', nullable: true })
   completedDate: Date;
-  @Column({ type: 'date', nullable: true })
-  completionTime: Date;
+  @Column({ type: 'time', nullable: true })
+  completedTime: number;
 }

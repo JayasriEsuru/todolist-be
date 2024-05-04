@@ -34,8 +34,14 @@ export class ListItemService {
 
     if (todo) {
       // Update the properties
-      todo.activity = dto.activity; // Assuming activity is a property of CreateItemDto
-      // Save the updated entity
+      todo.activity = dto.activity;
+      todo.status = dto.status;
+      todo.CompleteBy = dto.CompleteBy;
+      todo.startedDate = dto.startedDate;
+      todo.startedTime = dto.startedTime;
+      todo.completedDate = dto.completedDate;
+      todo.completedTime = dto.completedTime;
+
       return await this.ListItemRepository.save(todo);
     } else {
       throw new Error('ListItem not found');
